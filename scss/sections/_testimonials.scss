@@ -1,0 +1,62 @@
+// Import modules to use Mixin / Variables
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.testimonials {
+  position: relative;
+  padding: 0;
+  @include gradient;
+
+  .row {
+    --bs-gutter-x: 0;
+  }
+  &__card {
+    background-color: rgba($white, 0.8);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 2rem 2rem;
+    border-radius: 0.625rem;
+    height: auto;
+    text-align: center;
+
+    i {
+      font-size: 1.5rem;
+      color: rgba($primary, 0.7);
+    }
+
+    .ratings {
+      i {
+        font-size: 1rem;
+        color: rgba($primary, 0.7);
+      }
+    }
+  }
+
+  &__picture {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      border: 0.325rem solid rgba($primary, 0.7);
+    }
+  }
+
+  &__name {
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color: $white;
+    h3 {
+      padding-top: 0.8rem;
+      text-transform: capitalize;
+    }
+
+    p {
+      padding-bottom: 2rem;
+      text-transform: capitalize;
+    }
+  }
+}
